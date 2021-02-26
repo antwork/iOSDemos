@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xaa-EU-MEt">
+                                <rect key="frame" x="25" y="113" width="142" height="30"/>
+                                <state key="normal" title="self.name = @&quot;小王&quot;"/>
+                                <connections>
+                                    <action selector="changeName:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kdL-M3-VbK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ymG-zG-zDh">
+                                <rect key="frame" x="20" y="160" width="122" height="30"/>
+                                <state key="normal" title="_name = @&quot;小王&quot;"/>
+                                <connections>
+                                    <action selector="changeDashName:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fGj-zc-Vgd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e8G-vc-40L">
+                                <rect key="frame" x="20" y="208" width="244" height="30"/>
+                                <state key="normal" title="willChange _name=小王 didChange"/>
+                                <connections>
+                                    <action selector="changeDashNameWithKVO:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XAE-vZ-Tyu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n57-7w-mH8">
+                                <rect key="frame" x="20" y="297" width="62" height="30"/>
+                                <state key="normal" title="增加一行"/>
+                                <connections>
+                                    <action selector="plusBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6R6-ho-8qy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jfn-zb-qpw">
+                                <rect key="frame" x="20" y="329" width="62" height="30"/>
+                                <state key="normal" title="删除一行"/>
+                                <connections>
+                                    <action selector="minusBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bG8-Wn-6RJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="n57-7w-mH8" firstAttribute="leading" secondItem="e8G-vc-40L" secondAttribute="leading" id="4v3-pW-VBo"/>
+                            <constraint firstItem="ymG-zG-zDh" firstAttribute="leading" secondItem="e8G-vc-40L" secondAttribute="leading" id="5mJ-fA-iDw"/>
+                            <constraint firstItem="ymG-zG-zDh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="BkS-Yi-Abc"/>
+                            <constraint firstItem="Xaa-EU-MEt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="69" id="QMZ-wf-P9y"/>
+                            <constraint firstItem="e8G-vc-40L" firstAttribute="top" secondItem="ymG-zG-zDh" secondAttribute="bottom" constant="18" id="Qii-qH-yyN"/>
+                            <constraint firstItem="Jfn-zb-qpw" firstAttribute="top" secondItem="n57-7w-mH8" secondAttribute="bottom" constant="2" id="Upi-aW-k28"/>
+                            <constraint firstItem="Xaa-EU-MEt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="WSg-c5-PfA"/>
+                            <constraint firstItem="n57-7w-mH8" firstAttribute="leading" secondItem="Jfn-zb-qpw" secondAttribute="leading" id="bUc-cd-GPR"/>
+                            <constraint firstItem="ymG-zG-zDh" firstAttribute="top" secondItem="Xaa-EU-MEt" secondAttribute="bottom" constant="17" id="d92-n2-ktY"/>
+                            <constraint firstItem="n57-7w-mH8" firstAttribute="top" secondItem="e8G-vc-40L" secondAttribute="bottom" constant="59" id="h59-SK-2Wq"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="80"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
